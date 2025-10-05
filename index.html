@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="style.css">
+    <title>REST Countries</title>
+</head>
+<body>
+<header>
+    <nav class="nav">
+        <ul class="nav-list">
+            <li class="brand"><h1>Where in the world?</h1></li>
+            <li class="theme-toggle">
+                <button id="themeBtn" aria-label="Toggle theme">
+                    <img src="./img/moon-phase-symbol-svgrepo-com.svg" alt="theme icon"/>
+                    <span id="themeText">Dark Mode</span>
+                </button>
+            </li>
+        </ul>
+    </nav>
+    </nav>
+</header>
+<div class="container">
+</div>
+<main class="main">
+    <section class="controls">
+        <div class="search">
+            <input id="searchInput" type="text" placeholder="Search for a country..." />
+        </div>
+        <div class="filter">
+            <select id="regionSelect">
+                <option value="">Filter by Region</option>
+                <option value="Africa">Africa</option>
+                <option value="Americas">Americas</option>
+                <option value="Asia">Asia</option>
+                <option value="Europe">Europe</option>
+                <option value="Oceania">Oceania</option>
+            </select>
+        </div>
+    </section>
+
+    <section id="countries" class="countries-grid" aria-live="polite">
+        <!-- country cards injected here -->
+    </section>
+
+</main>
+
+<!-- detail overlay -->
+<div id="detailOverlay" class="overlay hidden" role="dialog" aria-modal="true">
+    <div class="overlay-content">
+        <button id="closeDetail" class="close">Back</button>
+        <div id="detailBody"></div>
+    </div>
+</div>
+
+<script src="script.js" defer></script>
+</div>
+</body>
+</html>
